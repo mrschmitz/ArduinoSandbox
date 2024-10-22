@@ -1,4 +1,20 @@
 #include <stdint.h>
+
+const unsigned long heartbeat[][4] = {
+  {
+    0xd812,
+    0x41040880,
+    0x50020000,
+    200
+  },
+  {
+    0x5,
+    0xa80880,
+    0x50020000,
+    1000
+  }
+};
+
 const unsigned long frames[][4] = {
   {
     0xe0000000,
@@ -328,24 +344,29 @@ const unsigned long frames[][4] = {
     0x5,
     0xf80f80,
     0x70020000,
-    66
-  },
+    0xffffffff // 66
+  }
+  /*
   {
+    // little heart
     0x5,
     0xa80880,
     0x50020000,
     600
   },
   {
+    // big heart
     0xd812,
     0x41040880,
     0x50020000,
     200
   },
   {
+    // little heart
     0x5,
     0xa80880,
     0x50020000,
-    0xFFFFFFFF
+    0xffffffff
   }
+  */
 };
